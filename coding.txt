@@ -1,0 +1,247 @@
+import java.io.*;
+ class search_engine
+{
+    public static void main()throws IOException
+    {
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
+        udf ob = new udf();
+        int ctr=1,qw;
+        char which;
+        while(true)
+        {
+            System.out.println("                                            WELCOME TO INFERNO                     ");
+            for(long j=0;j<=400000000l;j++)
+                ;
+            System.out.println("                                  Would you like to search for something?");
+             for(long j=0;j<=400000000l;j++)
+                ; 
+            System.out.println("");
+                System.out.print("                                                  ");System.out.print("| "); String str=br.readLine();
+            if(str.equalsIgnoreCase("no")||str.equalsIgnoreCase("n"))
+            {
+                System.out.println("");System.out.print("                                      ");System.out.println(" Thank you for trying inferno");
+                for(long j=0;j<=600000000l;j++)
+                ;
+                System.out.println("\f");
+                break;
+            }
+            else if(str.equalsIgnoreCase("yes")||str.equalsIgnoreCase("y"))
+            {
+                String pathD[]={"D:\\","D:\\Copy of simran_XB","D:\\DRIVERS","D:\\mansi_project","D:\\moleena","D:\\New Folder","D:\\number","D:\\simran_XB","D:\\athulya"};
+                ctr=1;
+                for(long j=0;j<=400000000l;j++)
+                ;
+                System.out.println(" \n \n \n                                   WHAT WOULD YOU LIKE TO SEARCH FOR?? ");
+                for(long j=0;j<=400000000l;j++)
+                ;
+                System.out.println("");
+                System.out.print("                                                 | ");String wrd=br.readLine();
+                for(long j=0;j<=400000000l;j++)
+                ;
+                System.out.println("\n \n \n                            WOULD YOU LIKE TO SEARCH IN THE D:drive OR C:drive OR JAVA CLASS  ");
+                for(long j=0;j<=400000000l;j++)
+                ;
+                System.out.print("\n \n \n                                          OR DO YOU WANT A LIST OF FILES?   ");
+                for(long j=0;j<=400000000l;j++)
+                ;
+                System.out.println("");
+                System.out.println("");
+                System.out.print("                                                       | ");String drive=br.readLine();
+                System.out.println(" \n \n ");
+                if(drive.equalsIgnoreCase("L")||drive.equalsIgnoreCase("List"))
+                {
+                    for(long j=0;j<=400000000l;j++)
+                ;
+                    System.out.print("\n \n \n                                        WHICH DRIVE: C-DRIVE OR D-DRIVE?   ");
+                      for(long j=0;j<=400000000l;j++)
+                ; 
+                 System.out.println("");   
+                System.out.print("                                                       | ");which=(char)br.read();
+                    if(which=='c'||which=='C')
+                    {
+                        File folder = new File("C:\\");
+                    File[] listOfFiles = folder.listFiles();
+                    for(int i=0;i<listOfFiles.length;i++)
+                    {
+                        if(listOfFiles[i].isFile()  ) 
+                        {
+                            System.out.println("\n                                      File  " + listOfFiles[i].getName());
+                            for(long j=0;j<=400000000l;j++)
+                                ;
+                            
+                        }
+                        if(listOfFiles[i].isDirectory())
+                        {
+                            System.out.println("\n                                      directory  "+ listOfFiles[i].getName());
+                              for(long j=0;j<=400000000l;j++)
+                                ;
+                            
+                        }
+                    }
+              
+       
+                    
+       
+                    for(long j=0;j<=2500000000l;j++)
+                    ;
+                    System.out.println("\f"); 
+           System.out.println("");
+            System.out.println("");
+           System.out.println("                                      THANK YOU FOR TRYING INFERNO! ");
+            for(long j=0;j<=2500000000l;j++)
+                    ;
+                    System.out.println("\f"); 
+           break;
+          
+        
+                }
+                if(which=='d'||which=='D')
+                {
+                    File folder = new File("D:\\");
+                        File[] listOfFiles = folder.listFiles();
+                        for(int i=0;i<listOfFiles.length;i++)
+                        {
+                            if(listOfFiles[i].isFile() )
+                            {
+                                System.out.println("\n                                      File  " + listOfFiles[i].getName());
+                                for(long j=0;j<=400000000l;j++)
+                                ;
+                                ctr++;
+                            }
+                            if(listOfFiles[i].isDirectory())
+                            {
+                                System.out.println("\n                                      directory  "+ listOfFiles[i].getName());
+                                  for(long j=0;j<=400000000l;j++)
+                                ;
+                                ctr++;    
+                            }
+                        }
+                         for(long j=0;j<=2500000000l;j++)
+                    ;
+                    System.out.println("\f");
+                     System.out.println("");
+            System.out.println("");
+             System.out.println("                                      THANK YOU FOR TRYING INFERNO! ");
+            for(long j=0;j<=2500000000l;j++)
+                    ;
+                    System.out.println("\f"); 
+           break;
+            }
+        }
+                    
+                    
+                if(drive.equalsIgnoreCase("D"))
+                {
+                    for(qw=0;qw<pathD.length;qw++)
+                    {
+                        File folder = new File(pathD[qw]);
+                        File[] listOfFiles = folder.listFiles();
+                        for(int i=0;i<listOfFiles.length;i++)
+                        {
+                            if(listOfFiles[i].isFile()&& ob.part2(wrd,listOfFiles[i].getName()  ) )
+                            {
+                                System.out.println("\n                                      File  " + listOfFiles[i].getName());
+                                for(long j=0;j<=400000000l;j++)
+                                ;
+                                ctr++;
+                            }
+                            if(listOfFiles[i].isDirectory()&& ob.part2(wrd,listOfFiles[i].getName()  ))
+                            {
+                                System.out.println("\n                                      directory  "+ listOfFiles[i].getName());
+                                  for(long j=0;j<=400000000l;j++)
+                                ;
+                                ctr++;    
+                            }
+                        }
+                    }
+                    if(ctr==1)
+                        System.out.println("\n                                 NO FILE FOUND");
+                    for(long j=0;j<=2500000000l;j++)
+                    ;
+                    System.out.println("\f");
+                }
+                if(drive.equalsIgnoreCase("c"))
+                {
+
+                    File folder = new File("C:\\");
+                    File[] listOfFiles = folder.listFiles();
+                    for(int i=0;i<listOfFiles.length;i++)
+                    {
+                        if(listOfFiles[i].isFile()&& ob.part2(wrd,listOfFiles[i].getName()  ) )
+                        {
+                            System.out.println("\n                                      File  " + listOfFiles[i].getName());
+                            for(long j=0;j<=400000000l;j++)
+                                ;
+                            ctr++;
+                        }
+                        if(listOfFiles[i].isDirectory()&& ob.part2(wrd,listOfFiles[i].getName()  ))
+                        {
+                            System.out.println("\n                                      directory  "+ listOfFiles[i].getName());
+                              for(long j=0;j<=400000000l;j++)
+                                ;
+                            ctr++;    
+                        }
+                    }
+                    if(ctr==1)
+                        System.out.println("\n                                         NO FILE FOUND");
+                    break;
+                      
+                }
+                if(drive.equalsIgnoreCase("java")||drive.equalsIgnoreCase("j"))
+                {
+
+                    File folder = new File(".");
+                    File[] listOfFiles = folder.listFiles();
+                    for(int i=0;i<listOfFiles.length;i++)
+                    {
+                        if(listOfFiles[i].isFile()&& ob.part2(wrd,listOfFiles[i].getName()  ) )
+                        {
+                            System.out.println("\n                                      File  " + listOfFiles[i].getName());
+                              for(long j=0;j<=400000000l;j++)
+                                ;
+                            ctr++;
+                        }
+                        if(listOfFiles[i].isDirectory()&& ob.part2(wrd,listOfFiles[i].getName()  ))
+                        {
+                            System.out.println("\n                                      directory  "+ listOfFiles[i].getName());
+                              for(long j=0;j<=400000000l;j++)
+                                ;
+                            ctr++;    
+                        }
+                    }
+                    if(ctr==1)
+                        System.out.println("\n                               NO FILE FOUND");
+                    for(long j=0;j<=2500000000l;j++)
+                    ;
+                    System.out.println("\f");
+                }
+
+            }
+        }
+    }
+    public  boolean part2(String str1, String str2)
+{
+if(!(str1.length()==str2.length()))
+{
+if(str1.equalsIgnoreCase(str2.substring(0,Math.min(str1.length(),str2.length()))))
+{
+return true;}
+
+else
+{
+return false;}
+}
+
+else if(str1.length()==str2.length()&& str1.equalsIgnoreCase(str2))
+{return true;}
+else
+return false;
+}
+    
+}
+
+
+
+
+    
